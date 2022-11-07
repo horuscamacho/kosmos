@@ -2,6 +2,7 @@ import React from 'react'
 
 const DivFormInput = (props) => {
     const {name, uid} = props
+    console.log(props)
   return (
     <div className='div-form'>
         <div className='div-form-input'>
