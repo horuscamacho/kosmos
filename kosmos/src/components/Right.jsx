@@ -12,17 +12,17 @@ const Right = (props) => {
       <form>
         {data.map((el) =>
           el[0].component === "text" ? (
-            <DivFormInput data={el} delete={delItem} />
+            <DivFormInput key={el.uid} data={el} delete={delItem} />
           ) : null
         )}
         {data.map((el) =>
           el[0].component === "options" ? (
-            <DivFormOption data={el} delete={delItem} />
+            <DivFormOption key={el.uid} data={el} delete={delItem} />
           ) : null
         )}
         {data.map((el) =>
           el[0].component === "select" ? (
-            <DivFormSelec data={el} delete={delItem} />
+            <DivFormSelec key={el.uid} data={el} delete={delItem} />
           ) : null
         )}
       </form>
