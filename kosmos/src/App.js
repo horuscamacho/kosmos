@@ -21,9 +21,10 @@ function App() {
   function deleteItem(e) {
     e.preventDefault()
     const uid = e.target.value
-    let newArr = input.filter(el => el[0].uid !== uid)
-    console.log("ESte es el array como quedaría")
-    console.log(input)
+    const newItem = input.filter(el => el.uid === uid)
+    console.log(newItem)
+    setDatos([...datos, newItem[0]])
+    setInput(input.filter(el => el.uid !== uid))
   }
   console.log("Este es el input", input)
   return (

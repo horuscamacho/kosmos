@@ -30,7 +30,7 @@
             "type": "text",
             "uid": "5b9b79d2-322-42a1-b79-203dfc0b6b98",
             "options": [
-                "Opción 1", "Opción 2", "Opción 3"
+                {name: "Opción 1", id: 1}, {name: "Opción 2", id: 2}, {name: "Opción 3", id: 3}
             ]
         },
         {

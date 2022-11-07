@@ -11,34 +11,19 @@ const Right = (props) => {
   return (
     <div className="right-section">
       <form>
-        {/* {data.map((el) =>
-          el[0].component === "text" ? (
-            <DivFormInput key={el[0].uid} data={el} deleteItem={delItem} />
-          ) : null
-        )}
-        {data.map((el) =>
-          el[0].component === "options" ? (
-            <DivFormOption key={el[0].uid} data={el} deleteItem={delItem} />
-          ) : null
-        )}
-        {data.map((el) =>
-          el[0].component === "select" ? (
-            <DivFormSelec key={el[0].uid} data={el} deleteItem={delItem} />
-          ) : null
-        )} */}
         {
             data.map(el => el.component === "text" ? (
-                <DivFormInput data={el} />
+                <DivFormInput key={el.uid} data={el} delItem={delItem} />
             ): null)
         }
         {
             data.map(el => el.component === "options" ? (
-                <DivFormOption data={el} />
+                <DivFormOption key={el.uid} data={el} delItem={delItem}/>
             ): null)
         }
         {
             data.map(el => el.component === "select" ? (
-                <DivFormSelec data={el} />
+                <DivFormSelec key={el.uid} data={el} delItem={delItem}/>
             ): null)
         }
       </form>
