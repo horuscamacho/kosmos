@@ -13,17 +13,19 @@ function App() {
     e.preventDefault()
     const uid = e.target.value
     const newItem = fields.filter(el => el.uid === uid)
-    setInput([...input , newItem])
+    console.log(newItem)
+    setInput([...input , newItem[0]])
     setDatos(datos.filter(el => el.uid !== uid))
   }
 
   function deleteItem(e) {
     e.preventDefault()
     const uid = e.target.value
-    input.filter(el => el.uid === uid)
-    setInput(input.filter(el => el.uid !== uid))
+    let newArr = input.filter(el => el[0].uid !== uid)
+    console.log("ESte es el array como quedaría")
+    console.log(input)
   }
-
+  console.log("Este es el input", input)
   return (
     <div className="App">
       <Left fields={datos} addItem={addItem} />

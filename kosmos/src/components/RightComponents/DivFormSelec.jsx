@@ -1,17 +1,19 @@
 import React from 'react'
 
 const DivFormSelec = (props) => {
-    const {uid, name, options} = props
+    console.log(props)
+    const {data} = props
   return (
     <div className='div-form'> 
         <div className='div-form-input'>
-            <h3>{name}</h3>
+            <h3>{data.label}</h3>
             <select>
-                {
-                    options.map(el => <option>{el}</option>)
-                }
+               {
+                data.options.map(el => <option>{el}</option>)
+               }
             </select>
         </div>
+        <button className='delete'>X</button>
     </div>
   )
 }
