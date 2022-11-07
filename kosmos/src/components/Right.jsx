@@ -5,7 +5,6 @@ import DivFormInput from "./RightComponents/DivForm";
 
 const Right = (props) => {
   const { data, delItem } = props;
-  console.log(data)
 
   useEffect(() => {}, [data]);
   return (

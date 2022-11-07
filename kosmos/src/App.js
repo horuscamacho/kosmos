@@ -13,7 +13,6 @@ function App() {
     e.preventDefault()
     const uid = e.target.value
     const newItem = fields.filter(el => el.uid === uid)
-    console.log(newItem)
     setInput([...input , newItem[0]])
     setDatos(datos.filter(el => el.uid !== uid))
   }
@@ -22,11 +21,9 @@ function App() {
     e.preventDefault()
     const uid = e.target.value
     const newItem = input.filter(el => el.uid === uid)
-    console.log(newItem)
     setDatos([...datos, newItem[0]])
     setInput(input.filter(el => el.uid !== uid))
   }
-  console.log("Este es el input", input)
   return (
     <div className="App">
       <Left fields={datos} addItem={addItem} />

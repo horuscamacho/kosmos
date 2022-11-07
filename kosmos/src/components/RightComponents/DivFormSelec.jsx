@@ -1,7 +1,6 @@
 import React from 'react'
 
 const DivFormSelec = (props) => {
-    console.log(props)
     const {data, delItem} = props
   return (
     <div className='div-form'> 
